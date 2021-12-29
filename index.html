@@ -1,9 +1,54 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head> </head>
+  <head> 
+    <style>
+      body {
+        font-family: sans-serif;
+        padding-left: 20%;
+        padding-right: 20%
+    
+      }
+      label {
+        font-size: 18px;
+        padding-bottom: 10px;
+      }
+      input, textarea, select{
+        display: block;
+        width: 100%;
+        padding-bottom: 20px;
+      }
+  
+      form {
+        background-color: #CC0000;
+        padding: 40px 40px 40px 40px;
+      }
+      #radio-button-area{
+        float: left;
+        justify-content: left;
+      }
+
+      #button-area{
+        /* float: center;
+        justify-content: left;
+        align: left; */
+
+        padding: 0;
+        margin: 0;
+        vertical-align: bottom;
+        position: relative;
+        top: -1px;
+        background-color: green;
+      }
+      .radio-inline{
+        display: inline-block;
+        width: 50%
+      }
+    </style>
+  </head>
   <body>
-    <h1 id="title">Tell Me About Music</h1>
+    <h1 id="title">Tell Me About Cars</h1>
     <p id="description">
-      This is a survey where you can tell us about the music you're inspired by.
+      This is a survey where you can tell us about cars you desire to drive.
     </p>
     <form id="survey-form">
     <label id="name-label">Name: </label>
@@ -12,32 +57,43 @@
     <input type="email" name="email" id="email" required placeholder="Best Email"></input><br> 
     <label id="number-label">Number:</label> <input type="number" name="number" id="number" min="0" max="10"required placeholder="Excitement Level!"></input><br>  
         <input type="submit">
-
-    <select id="dropdown" name="guitars">
-      <option value="fender">Fender</option>
-      <option value="martin">Martin</option>
-      <option value="epiphone">Epiphone</option>
+<br>
+    <label id="car-type">Car Type</label>
+    <select id="dropdown" name="car type">      
+      <option value="suv">SUV</option>
+      <option value="sedan">Sedan</option>
+      <option value="van">Van</option>
+      <option value="truck">Truck</option>
       <option value="other">Other</option>
-    </select>
+    </select><br>
     <br>
-    <input type="radio" name=gender" value="male"> Male <br>
-    <input type="radio" name=gender" value="male"> Male <br>    
-    <input type="radio" name=gender" value="male"> Male <br>
-
+        <label id="additional-comments-label">Additional Comments:</label>
+        <textarea placeholder="Additional Comments"></textarea><br>
     <br>
-
-    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-    <label for="vehicle1"> I have a bike</label><br>
-    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-    <label for="vehicle2"> I have a car</label><br>
-    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-    <label for="vehicle3"> I have a boat</label><br>   
+    <div id="radio-button-area">
+      <p>Gender: (Optional)</p>
+      <input type="radio" class="radio-inline" name="gender" value="male"> Male <br>
+      <input type="radio" class="radio-inline" name="gender" value="female"> Female <br>    
+    </div>
+    <br>  
     <br>
-
-    <textarea placeholder="Additional Comments"></textarea>
+    <br>
+    <div id="button-area">
+      <br>
+      <p>Current Vehicle: (Optional)</p>
+      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+      <label for="vehicle1"> I have a SUV.</label>
+      <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+      <label for="vehicle2"> I have a sedan.</label>
+      <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+      <label for="vehicle3"> I have a van.</label>
+      <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+      <label for="vehicle3"> I have a truck.</label>
+      <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+      <label for="vehicle3"> I don't currently have a vehicle.</label>   
+    </div>
+    <br>
     <input type="submit" id="submit">
-
-
     </form>
     <script
       type="text/javascript"
